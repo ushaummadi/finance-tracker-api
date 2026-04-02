@@ -9,44 +9,83 @@ The Finance Tracker API is designed to help users manage their financial records
 This project demonstrates strong backend engineering principles including modular architecture, data validation, authentication, and clean API design.
 
 ✨ Features
+
 🔐 Authentication & Authorization
+
 JWT-based authentication using python-jose
+
 Role-based access control:
+
 Admin → Full access (CRUD + analytics)
+
 Analyst → Read + analytics
+
 Viewer → Read-only
+
 💰 Transaction Management
+
 Create, Read, Update, Delete (CRUD) operations
+
 Fields:
+
 Amount
+
 Type (Income / Expense)
+
 Category
+
 Date
+
 Notes
+
 🔍 Filtering & Pagination
+
 Filter transactions by:
+
 Type (income / expense)
+
 Category
+
 Pagination support:
+
 skip and limit
+
 📊 Analytics Engine
+
 Total Income & Expenses
+
 Balance Calculation
+
 Category-wise breakdown
+
 Monthly summaries using aggregation queries
+
 ⚠️ Validation & Error Handling
+
 Input validation using Pydantic
+
 Proper HTTP status codes
+
 Clear error messages
+
 🛠️ Tech Stack
+
 Technology	Purpose
+
 FastAPI	Backend framework
+
 Python	Core language
+
 SQLAlchemy	ORM for database
+
 SQLite	Database
+
 Pydantic	Data validation
+
 JWT (python-jose)	Authentication
+
 📁 Project Structure
+
 finance-tracker/
 │
 ├── app/
@@ -66,34 +105,52 @@ finance-tracker/
 ├── README.md
 
 
-
-
-
 ⚙️ Installation & Setup
+
 1️⃣ Clone Repository
+
 git clone https://github.com/your-username/finance-tracker.git
+
 cd finance-tracker
+
 2️⃣ Install Dependencies
+
 pip install -r requirements.txt
+
 3️⃣ Run the Application
+
 uvicorn app.main:app --reload
+
 4️⃣ Open API Docs
+
 http://127.0.0.1:8000/docs
 
 🔐 Authentication Flow
+
 Call /login endpoint
+
 Provide username and role:
+
 {
+
   "username": "usha",
+  
   "role": "admin"
+  
 }
+
 Copy the access_token
 
 Click Authorize 🔒 in Swagger UI
+
 Enter:
+
 Bearer <your_token>
+
 📌 API Endpoints
+
 🔑 Authentication
+
 POST /login → Generate JWT token
 
 💰 Transactions
