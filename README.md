@@ -97,29 +97,49 @@ Bearer <your_token>
 POST /login → Generate JWT token
 
 💰 Transactions
+
 POST /transactions → Create transaction
+
 GET /transactions → Get all transactions
+
 PUT /transactions/{id} → Update transaction
+
 DELETE /transactions/{id} → Delete transaction
+
 GET /transactions/filter → Filter transactions
+
 GET /transactions/paginated → Paginated results
+
 📊 Analytics
+
 GET /analytics/summary → Income, Expense, Balance
+
 GET /analytics/category → Category-wise totals
+
 GET /analytics/monthly → Monthly summaries
 
 🧠 Architecture & Design
+
 Modular structure separating:
+
 Routes
+
 Business logic (CRUD)
+
 Models
+
 Validation (schemas)
+
 Role-based access control using permission mapping
+
 JWT-based stateless authentication
+
 SQL aggregation for analytics queries
+
 Clean and maintainable code organization
 
 ⚡ Example Request
+
 Create Transaction
 {
   "amount": 5000,
@@ -130,23 +150,37 @@ Create Transaction
 }
 
 ⚠️ Error Handling
+
 400 → Bad request / validation error
+
 401 → Unauthorized (invalid token)
+
 403 → Forbidden (insufficient permissions)
+
 404 → Resource not found
 
 🚀 Future Enhancements
+
 User authentication with password hashing
+
 PostgreSQL integration
+
 Frontend dashboard (React)
+
 Deployment on cloud (Render / AWS)
+
 Unit testing (pytest)
 
 🏆 Key Highlights
+
 Built a production-style backend system
+
 Implemented secure authentication & authorization
+
 Designed scalable and modular architecture
+
 Developed analytics using real database queries
 
 👨‍💻 Author
+
 Usha Rani
