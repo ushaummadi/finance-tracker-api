@@ -64,6 +64,11 @@ finance-tracker/
 │
 ├── requirements.txt
 ├── README.md
+
+
+
+
+
 ⚙️ Installation & Setup
 1️⃣ Clone Repository
 git clone https://github.com/your-username/finance-tracker.git
@@ -74,6 +79,7 @@ pip install -r requirements.txt
 uvicorn app.main:app --reload
 4️⃣ Open API Docs
 http://127.0.0.1:8000/docs
+
 🔐 Authentication Flow
 Call /login endpoint
 Provide username and role:
@@ -82,12 +88,14 @@ Provide username and role:
   "role": "admin"
 }
 Copy the access_token
+
 Click Authorize 🔒 in Swagger UI
 Enter:
 Bearer <your_token>
 📌 API Endpoints
 🔑 Authentication
 POST /login → Generate JWT token
+
 💰 Transactions
 POST /transactions → Create transaction
 GET /transactions → Get all transactions
@@ -99,6 +107,7 @@ GET /transactions/paginated → Paginated results
 GET /analytics/summary → Income, Expense, Balance
 GET /analytics/category → Category-wise totals
 GET /analytics/monthly → Monthly summaries
+
 🧠 Architecture & Design
 Modular structure separating:
 Routes
@@ -109,6 +118,7 @@ Role-based access control using permission mapping
 JWT-based stateless authentication
 SQL aggregation for analytics queries
 Clean and maintainable code organization
+
 ⚡ Example Request
 Create Transaction
 {
@@ -118,21 +128,25 @@ Create Transaction
   "date": "2026-04-02",
   "notes": "monthly salary"
 }
+
 ⚠️ Error Handling
 400 → Bad request / validation error
 401 → Unauthorized (invalid token)
 403 → Forbidden (insufficient permissions)
 404 → Resource not found
+
 🚀 Future Enhancements
 User authentication with password hashing
 PostgreSQL integration
 Frontend dashboard (React)
 Deployment on cloud (Render / AWS)
 Unit testing (pytest)
+
 🏆 Key Highlights
 Built a production-style backend system
 Implemented secure authentication & authorization
 Designed scalable and modular architecture
 Developed analytics using real database queries
+
 👨‍💻 Author
 Usha Rani
