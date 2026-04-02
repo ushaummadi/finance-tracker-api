@@ -89,7 +89,9 @@ JWT (python-jose)	Authentication
 finance-tracker/
 │
 ├── app/
-│   ├── main.py              # Entry point
+
+│   ├── main.py 
+# Entry point
 │   ├── database.py          # DB connection
 │   ├── models.py            # ORM models
 │   ├── schemas.py           # Request/response validation
@@ -199,11 +201,17 @@ Clean and maintainable code organization
 
 Create Transaction
 {
+
   "amount": 5000,
+  
   "type": "income",
+  
   "category": "salary",
+  
   "date": "2026-04-02",
+  
   "notes": "monthly salary"
+  
 }
 
 ⚠️ Error Handling
