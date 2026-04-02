@@ -87,23 +87,33 @@ JWT (python-jose)	Authentication
 📁 Project Structure
 
 finance-tracker/
-│
+
 ├── app/
 
-│   ├── main.py 
-# Entry point
+│   ├── main.py # Entry point
+
 │   ├── database.py          # DB connection
+
 │   ├── models.py            # ORM models
+
 │   ├── schemas.py           # Request/response validation
+
 │   ├── crud.py              # Business logic
+
 │   ├── auth.py              # JWT logic
+
 │   ├── dependencies.py      # Auth + permissions
+
 │   ├── routes/
+
 │   │   ├── transactions.py  # Transaction APIs
+
 │   │   ├── analytics.py     # Analytics APIs
+
 │   │   ├── users.py         # Auth APIs
 │
 ├── requirements.txt
+
 ├── README.md
 
 
